@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Экоинжком</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!--header start-->
+	<header>
+		<div class="header_logo" id="logo">
+			<a href="./index.html">
+				<img src="./img/logo_main.jpg" alt="логотип Экоинжком"/>
+			</a>
+		</div>
+		<div class="header_conenction">
+			<a class="header_a--conenction">
+				<p class="header_p--conenction" onclick="change()">обратная связь</p>
+			</a>
+		</div>
+		<div class="header_contact">
+			<a class="header_a--phone" href="tel:+79664444230">
+				<p class="header_p--phone">+7 (966) 444-42-30</p>
+			</a>
+			<a class="header_a--mail" href="mailto:vlad@htmlbook.ru">
+				<p class="header_p--mail">ecoingcom@mail.ru</p>
+			</a>
+		</div>
+	</header>
+	<!--header end-->
+<div class="top_line">
+	<div class="toggle">
+		<span></span>
+	</div>
+</div>
+
+
+	<!--nav start-->
+	<nav class="nav_tebletsDesctop">
+		<ul class="topmenu">
+			<li id="catalogDesctop"><a href="#" class="topmenu_link">Каталог</a>
+				<ul id="catalogDesctop" class="submenu">
+					<li class="nav_li"><a class="nav_a" href="./equipments.html">Оборудование</a></li>
+					<li class="nav_li"><a class="nav_a" href="./solutions.html">Готовые решения</a></li>
+				</ul>
+			</li>
+			<li><a href="./services.html">Услуги</a></li>
+			<li><a href="./price.pdf" target="_blank">Прайс-лист</a></li>
+			<li id="project"><a href="./projects.html">Проекты</a></li>
+			<li><a href="./gallery.html">Галерея</a></li>
+			<li id="aboutCompanyDesctop"><a href="#" class="topmenu_link">Главная</a>
+				<ul id="aboutCompanyDesctop" class="submenu">
+					<li class="nav_li"><a class="nav_a" href="./about.html">О компании</a></li>
+					<li class="nav_li"><a class="nav_a" href="./req.html">Реквизиты</a></li>
+					<li class="nav_li"><a class="nav_a" href="./patents.html">Патенты</a></li>
+					<li class="nav_li"><a class="nav_a" href="./articles.html">Статьи</a></li>
+					<li class="nav_li"><a class="nav_a" href="./sales.html">Акции</a></li>
+					<li class="nav_li"><a class="nav_a" href="./news.html">Новости</a></li>
+				</ul>
+			</li>
+			<li><a href="./contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+	<!--nav end -->
+
+	<!--nav start mobile-->
+	<nav class="nav_mobile">
+		<ul class="topmenu">
+			<li id="catalog">
+				<div class="catalog_wrapper">
+					<!-- <a href="#">Каталог</a><a class="nav_a--wrapper" href="#"> -->
+					<div class="nav_a--wrapper">Каталог</div>
+						<i class="fa fa-angle-down" aria-hidden="true" id="icon_show--catalog"></i>
+						<i class="fa fa-angle-down" aria-hidden="true" id="icon_hide--catalog"></i>
+					</div>
+				</div>
+				<ul id="catalog" class="submenu">
+					<li class="nav_li">
+						<div class="wrapper_equipments">
+							<a class="nav_a" href="#">Оборудование</a>
+							<!-- <a href="#" class="nav_a--wrapperEquipmnets"> -->
+							<div  class="nav_a--wrapperEquipmnets">
+								<i class="fa fa-angle-down" aria-hidden="true" id="icon_show--equipments"></i>
+								<i class="fa fa-angle-down" aria-hidden="true" id="icon_hide--equipments"></i>
+							</div>
+						</div>
+						<li id="equipments">
+							<a href="./filters.html">Фильтры:электролиз,сорбция</a>
+								<a href="./ozanator.html">Озанаторы вод и воздуха</a>
+						</li>
+					</li>
+					<li class="nav_li">
+						<div class="wrapper_solutions">
+							<a class="nav_a" href="#">Готовые решения</a>
+							<!-- <a href="#" class="nav_a--wrapperSolitions"> -->
+							<div  class="nav_a--wrapperSolitions">
+								<i class="fa fa-angle-down" aria-hidden="true" id="icon_show--solutions"></i>
+								<i class="fa fa-angle-down" aria-hidden="true" id="icon_hide--solutions"></i>
+							</div>
+						</div>
+						<li id="solutions">
+							<a href="./water-purification.html">Очистка питьевой воды</a>
+							<a href="./bottling-water.html">Розлив бутилированной воды</a>
+							<a href="./system_clearning.html">Система очистки воды</br>для бытовых нужд</a>
+						  <a href="./сleaning-drains.html">Очистка сточых вод</a>
+							<a href="./galvanic-lines.html">Оснащение гальванических линий</a>
+							<a href="./air-cleaning.html">Воздуха-пыле газоочистка</a>
+						</li>
+					</li>
+				</ul>
+			</li>
+			<li><a href="./services.html">Услуги</a></li>
+			<li><a href="./price.pdf" target="_blank">Прайс-лист</a></li>
+			<li id="project"><a href="./projects.html">Проекты</a></li>
+			<li><a href="./gallery.html">Галерея</a></li>
+			<li id="aboutCompany">
+				<div class="aboutCompany_wrapper">
+					<!-- <a href="#">Главная</a><a class="nav_a--wrapper" href="#"> -->
+					<div class="nav_a--wrapper">Главная</div>
+						<i class="fa fa-angle-down" aria-hidden="true" id="icon_show--aboutCompany"></i>
+						<i class="fa fa-angle-down" aria-hidden="true" id="icon_hide--aboutCompany"></i>
+				</div>
+				<ul id="aboutCompany" class="submenu">
+					<li class="nav_li"><a class="nav_a" href="./about.html">О компании</a></li>
+					<li class="nav_li"><a class="nav_a" href="./req.html" id="nav_delete">Реквизиты</a></li>
+					<li class="nav_li"><a class="nav_a" href="./patents.html">Патенты</a></li>
+					<li class="nav_li"><a class="nav_a" href="./articles.html">Статьи</a></li>
+					<li class="nav_li"><a class="nav_a" href="./sales.html">Акции</a></li>
+					<li class="nav_li"><a class="nav_a" href="./news.html">Новости</a></li>
+				</ul>
+			</li>
+			<li><a href="./contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+	<!--nav end mobile-->
+
+	<!--start equipments page-->
+	<div class="child_page">
+		<div class="child_cover">
+			<nav class="child_nav">
+				<a class="child_main" href="./index.html">Главная</a>
+				<div class="child_symbol" id="nav_delete">&#62;</div>
+				<a class="child_child" href="./equipments.html" id="nav_delete">Оборудование</a>
+				<div class="child_symbol">&#62;</div>
+				<a class="child_child--last" href="#">Озанаторы воды и воздуха</a>
+			</nav>
+			<div class="child_page--body" id="correction_childProduct--width">
+				<h1 class="child_h1" id="child_h1">Озанаторы воды и воздуха</h1>
+				<div class="child_all">
+					<div class="child_dificult">
+						<div class="main_equipments--sub">
+							<div class="production_firstElement--sub">
+								<figure class="production_figure">
+									<a href ="./ov-2.html" alt=""><p class="production_p--figure"><img class="production_img--sub" src="./img/ov-2_1.jpg"></p></a>
+									<p class="production_p--vendoreCode" >Артикул: OВ-2</p>
+									<figcaption class="production_figcaption--sub" ><span>OВ-2</span></figcaption>
+									<p class="production_p--dificult" >Дезодорация, дезинфекция, обезжелезивание</p>
+									<p class="production_p--priceSub" >По запросу</p>
+								</figure>
+							</div>
+							<div class="production_firstElement--sub">
+								<figure class="production_figure">
+									<a href ="./ov-m-20.html" alt=""><p class="production_p--figure"><img class="production_img--sub" src="./img/ov-m-20_1.jpg"></p></a>
+									<p class="production_p--vendoreCode">Артикул:OV-M-20</p>
+									<figcaption class="production_figcaption--sub"><span>ОВ-М-20</span></figcaption>
+									<p class="production_p--dificult" >Обеззараживание, очистка, насыщение кислородом</p>
+									<p class="production_p--priceSub">По запросу</p>
+								</figure>
+							</div>
+							<div class="production_firstElement--sub">
+								<figure class="production_figure">
+									<a href ="./mk-10.html" alt=""><p class="production_p--figure"><img class="production_img--sub" src="./img/mk-10_1.jpg"></p></a>
+									<p class="production_p--vendoreCode">Артикул: MK-10</p>
+									<figcaption class="production_figcaption--sub"><span>КИСЛОРОДНЫЙ ОЗОНАТОР МК-10</span></br></figcaption>
+									<p class="production_p--dificult" >Озонирование воды и воздуха в промышленных масштабах</p>
+									<p class="production_p--priceSub">По запросу</p>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--equipments page end-->
+
+
+	<!-- popup end -->
+	<div id="parent_popup">
+	    <div id="popup">
+	        <div id="title">
+	          <p id="cross" onclick="change2()">&#9747;</p>
+	          <h4>Заявка</h4>
+	        </div>
+	        <form id='form'>
+	          <p>
+	            <input type="text" name='name' id='name' placeholder="Имя">
+	          </p>
+	          <p>
+	            <input type="text" name='phone' id='phone' placeholder="Телефон">
+	          </p>
+	          <p>
+	            <input type="email" name='email' id='email' placeholder="Эл.почта">
+	          </p>
+	          <p>
+	            <textarea name='message' id='message' rows="5" placeholder="Задайте ваш вопрос"></textarea>
+	          </p>
+	          <p class="full">
+	            <div id="button" onclick="change1()">Отправить</div>
+	          </p>
+	        </form>
+	    </div>
+	</div>
+	<!-- popup end -->
+
+	<!-- answer start -->
+			 <div id="popup_answer">
+					 <p>Ваша заявка принята!</br>Ожидайте звонка нашего специалиста!</p>
+			 </div>
+	<!-- answer end -->
+
+
+	<!--start footer-->
+	<footer>
+		<div class="footer_gasket">
+	 		<div class="footer_firstLine">
+				<figure>
+					<p><img class="footer_img" src="./img/footer_logo.png" alt=""></p>
+					<figcaption class="footer_figcaption">тел. +7(966)444-42-30</figcaption>
+				</figure>
+				<ul class="footer_ul">
+					<li class="footer_li"><a class="footer_a" href="./gallery.html">Галерея</a></li>
+					<li class="footer_li"><a class="footer_a" href="./price.pdf">Прайс-лист</a></li>
+				</ul>
+				<ul class="footer_ul">
+					<li class="footer_li"><a class="footer_a" href="./about.html">О компании</a></li>
+					<li class="footer_li"><a class="footer_a" href="./projects.html">Проекты</a></li>
+				</ul>
+				<ul class="footer_ul">
+					<li class="footer_li"><a class="footer_a" href="./services.html">Услуги</a></li>
+					<li class="footer_li"><a class="footer_a" href="./contacts.html">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="footer_secondLine">
+				<p class="footer_p--firstLine">127238, г.Москва,</br>Локомотивный пр-д, д.21</p>
+				<p class="footer_p--secondLine">©ООО «Экологическая инжиниринговая Компания-Трейд», 2019</br>Все права защищены.</p>
+				<!-- <img src="" alt=""> -->
+			</div>
+		</div>
+	</footer>
+	<!--footer end-->
+
+
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

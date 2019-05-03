@@ -1,0 +1,2594 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: roboto-example
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+
+/*------------------------------------------------------------------------*/
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css start*/
+* { box-sizing: border-box; }
+html
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing:  border-box;
+
+body
+  margin: 0
+
+
+main
+  display: block
+
+h1
+  font-size: 2em
+  margin: 0.67em 0
+
+hr
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+
+pre
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+
+a
+  background-color: transparent
+
+abbr[title]
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+
+b,
+strong
+  font-weight: bolder
+
+code,
+kbd,
+samp
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+
+small
+  font-size: 80%;
+
+
+sub,
+sup
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+
+
+sub
+  bottom: -0.25em;
+
+
+sup
+  top: -0.5em;
+
+img
+  border-style: none;
+
+button,
+input,
+optgroup,
+select,
+textarea
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+
+button,
+input
+  overflow: visible;
+
+button,
+select
+  text-transform: none;
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"]
+  -webkit-appearance: button;
+
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+  border-style: none;
+  padding: 0;
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+  outline: 1px dotted ButtonText;
+
+fieldset
+  padding: 0.35em 0.75em 0.625em;
+
+
+legend
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+
+progress
+  vertical-align: baseline;
+
+textarea
+  overflow: auto;
+
+
+[type="checkbox"],
+[type="radio"]
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button
+  height: auto;
+
+
+[type="search"]
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+
+
+[type="search"]::-webkit-search-decoration
+  -webkit-appearance: none;
+
+::-webkit-file-upload-button
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+
+details
+  display: block;
+
+summary
+  display: list-item;
+
+template
+  display: none;
+
+[hidden]
+  display: none;
+/*------------------------------------------------------------------------*/
+
+/*all*/
+html
+  display: flex
+  justify-content: center
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+
+a:hover
+	text-decoration: none
+
+
+/*header*/
+header
+  display: inherit
+  max-width: 900px
+  width: 100%
+  justify-content: space-between
+  margin: 20px 0 30px 0
+  flex: 0 0 auto
+
+.header_logo > a > img
+	width: 205px
+	height: 55px
+
+.header_conenction
+  display: inherit
+  align-items: flex-end
+
+.header_p--conenction
+  font-size: 14px
+  color: #5b7aba
+  margin-right: 207px
+  cursor: pointer
+
+.header_p--phone,.header_p--mail
+  color: #7f7d7c
+  text-align: right
+
+.header_p--phone
+	font-size: 18px
+
+.header_p--mail
+	font-size: 16px
+	margin-top: -4px
+
+.header_p--phone
+  margin-bottom: 0
+
+
+/*nav start*/
+nav
+  display: flex
+  max-width: 900px
+  width: 100%
+  position: relative
+
+.topmenu
+  display: flex
+  justify-content: space-between
+  max-width: 900px
+  width: 100%
+
+nav a
+  text-decoration: none
+  outline: none
+  display: block
+  transition: .3s ease-in-out
+  list-style: none
+
+nav ul
+  list-style: none
+  margin: 0
+  padding: 0
+  position: absolute
+  top: -27px
+
+.topmenu > li
+  flex-grow: 1
+  padding: 0
+  float: left
+  position: relative
+  font-family:
+  background-color: #009dc6
+  text-align: center
+
+.topmenu > li:hover
+  background-color: white
+
+.topmenu > li > a
+  text-transform: uppercase
+  font-size: 16px
+  color: #000000
+  text-decoration: none
+  padding: 9px 0
+
+.topmenu_link:after
+  content: "\f107"
+  font-family: "FontAwesome"
+  color: inherit
+  margin-left: 20px
+
+.submenu, #equipments, #solutions
+  background: white
+  position: absolute
+  left: 0
+  top: 100%
+  z-index: 5
+  opacity: 0
+  transform: scaleY(0)
+  transform-origin: 0 0
+  transition: .5s ease-in-out
+
+#catalog, #catalogDesctop
+	max-width: 135px
+	width: 100%
+
+#aboutCompany, #aboutCompanyDesctop
+	max-width: 177px
+	width: 100%
+
+#catalogDesctop li a
+  padding: 10px 3px
+
+// #aboutCompanyDesctop li a
+// 	padding-left: 10px
+
+#aboutCompanyDesctop li a
+  padding: 10px 12px
+
+.submenu a
+  color: #000000
+  text-align: left
+  text-decoration: none
+  white-space: nowrap
+
+.topmenu > li:hover .submenu
+  opacity: 1
+  transform: scaleY(1)
+
+.nav_li:hover
+	outline: 2px groove #1ebff5
+
+a.nav_a
+	font-family: roboto-thin
+	font-size: 16px
+/*nav end*/
+
+
+/*article start*/
+article
+	background-image: url(/img/background.jpg)
+	width: 100%
+	height: 340px
+	background-repeat: no-repeat
+	background-position: left
+	display: flex
+	justify-content: center
+	align-items: flex-end
+
+.article
+  width: 100%
+  max-width: 1912px
+  margin: 0 auto
+
+.article_p--first, .article_p--second
+  color: white
+  text-align: center
+  font-weight: bold
+  text-transform: uppercase
+
+.article_p--first
+  font-size: 30px
+
+.article_p--second
+  font-size: 24px
+
+.article_circle
+	display: flex
+	justify-content: center
+	margin: 55px 0 27px 0
+
+.article_a--firstCircle, .article_a--secondCircle, .article_a--thirdtCircle,
+.article_a--fortthtCircle, .article_a--fifitCircle
+  width: 13px
+  height: 13px
+  border-radius: 50%
+  background-color: white
+  display: block
+
+.article_circle div
+  padding: 7px
+  cursor: pointer
+
+.article_circle--green
+	transition: .3s ease-in-out
+	background-color: #04a562
+
+.article_a--firstCircle
+	background-color: #04a562
+	transition: .3s ease-in-out
+
+.article_a--firstCircleAdd
+	background-color: white
+	transition: .3s ease-in-out
+
+#article_secondCircle, #article_thirdtCircle, #article_fortthtCircle
+	margin-left: 17px
+
+#article_fortthtCircle
+	margin-right: 17px
+
+#article_second, #article_third, #article_forth, #article_fifth
+	display: none
+
+// figcaption.main_child--figcaption
+// 	font-size: 12px
+// 	font-family:
+// 	text-transform: uppercase
+// 	color: #406198
+// 	white-space: nowrap
+// 	text-align: center
+// //
+// p.main_child--textData
+//   text-align: justify
+//   color: #585551
+//   font-size: 15px
+//
+// .main_child--textDataWrapper
+// 	display: flex
+// 	justify-content: space-between
+//
+// .main_child--button:hover
+// 	color: #0048ff
+
+
+/*BENEFITS*/
+.benefits
+	max-width: 900px
+	width: 100%
+	margin-top: 12px
+
+.benefits_cover
+	display: flex
+	justify-content: space-between
+
+.benefits_figure
+  text-align: center
+
+.benefits_figcaption
+	color: #1d1d1d
+	font-size: 12px
+	margin: 0
+	line-height: 1.2
+
+.benefits_img
+  width: 67px
+  height: 66px
+
+p.benefits_p
+	margin-bottom: 10px
+
+
+/*main start*/
+main
+	background-color: #f6f9f8
+	width: 100%
+
+.main_cover
+	width: 100%
+	margin: 0 auto
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.main_text
+	width: 589px
+	margin: auto
+	margin-top: 42px
+
+.main_p
+  color: #005675
+  font-size: 21px
+  text-align: center
+  line-height: 1.3
+
+.main_products
+	 padding-bottom: 46px
+	 display: flex
+	 justify-content: space-between
+	 max-width: 900px
+	 width: 100%
+
+.main_products--catalogPage
+	display: flex
+  justify-content: center
+
+.main_solutions
+  margin-left: 27px
+
+.main_products p:hover
+  font-weight: bold
+
+.main_h2
+	margin-top: 20px
+	font-size: 24px
+	font-weight: normal
+	color: #585551
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 29px
+
+.main_p--filters, .main_p--systemClearning, .main_p--ozonizer, .main_p--cleaning,
+.main_p--bottling, .main_p--cleaningDrains, .main_p--equipment,
+.main_p--clearningAir,
+  font-size: 18px
+  text-transform: uppercase
+  width: 365px
+  height: 90px
+  padding-left: 34px
+  display: flex
+  align-items: center
+  margin-top: 3px
+
+.main_p--filters
+  background-color: #87a1b6
+
+.main_a--filters
+  color: #00416a
+
+.main_p--ozonizer
+  background-color: #79d4c9
+
+.main_p--systemClearning
+	background-color: #667ba2
+
+.main_a--ozonizer, .main_a--cleaning,
+.main_a--systemClearning
+  color: white
+
+.main_p--cleaning
+  background-color: #c6c6c6
+
+.main_p--bottling
+  background-color: #79afa5
+
+.main_a--bottling
+  color: #615b77
+
+.main_p--cleaningDrains
+  background-color: #bae0c8
+
+.main_a--cleaningDrains
+  color: #8f908f
+
+.main_p--equipment
+  background-color: #79d5c9
+
+.main_a--equipment
+  color: #6e6e6e
+
+.main_p--clearningAir
+  background-color: #959595
+
+.main_a--clearningAir
+  color: white
+
+.main_a--filters:hover, .main_a--clearningAir:hover, .main_a--cleaning:hover,
+.main_a--ozonizer:hover, .main_a--bottling:hover, .main_a--cleaningDrains:hover,
+.main_a--equipment:hover, .main_a--clearningAir:hover,
+.main_a--systemClearning:hover
+	text-decoration: none
+
+.main_a--filters:hover
+  color: #00416a
+
+.main_a--cleaning:hover, .main_a--ozonizer:hover
+  color: #fff
+
+.main_a--bottling:hover
+  color: #615b77
+
+.main_a--cleaningDrains:hover
+  color: #8f908f
+
+.main_a--equipment:hover
+  color: #6e6e6e
+
+.main_a--clearningAir:hover, .main_a--systemClearning:hover
+  color: #fff
+
+
+/*SEVICES*/
+.services
+  padding-bottom: 75px
+
+.services_all, .services_all--page
+  display: flex
+  justify-content: center
+
+.services_h2
+	font-size: 24px
+	font-weight: normal
+	color: #585551
+	text-transform: uppercase
+	text-align: center
+	margin-top: 65px
+	margin-bottom: 32px
+	margin: 65px 0 32px 0
+
+h2.production_h2
+	margin-bottom:
+
+.services_p
+  text-align: center
+
+a.service_a
+  background-color: #898989
+  color: white
+  padding: 13px 35px 12px 25px
+  font-size: 20px
+  font-family:
+  text-transform: uppercase
+
+a.service_a:hover
+  background-color: #00ad5d
+
+.services_img
+	width: 64px
+	height: 87px
+
+.services_h3
+  font-size: 18px
+  font-weight: normal
+  color: #000000
+  text-align: center
+  margin-bottom: 57px
+  line-height: 1.2
+  margin: 30px 0 103px 0
+
+.services_design
+  margin-left: 195px
+
+.service_p, .service_p--right
+	 font-size: 20px
+	 color: #585551
+	 line-height: 1.2
+	 display: flex
+	 justify-content: center
+	 text-align: center
+
+.services_left--a, .services_right--a
+    text-align: center
+
+.service_p
+	margin-bottom: 64px
+
+.service_p--right
+  margin-bottom: 88px
+
+.services_line
+  width: 189px
+  height: 2px
+  background-color: #7c7c7c
+  margin: -84px 0 53px 0
+
+
+/*PRODUCTION*/
+.production_cover
+	background-color: #e9e6e6
+	width: 100%
+
+.production
+	display: flex
+	justify-content: center
+	// margin-top: 93px
+
+.production_first, .production_second, .production_third,
+.production_forth, .production_fifth, .production_circle
+	width: 100%
+	max-width: 900px
+
+.production_h2
+  font-size: 24px
+  font-weight: normal
+  color: #585551
+  text-transform: uppercase
+  text-align: center
+
+.production_cover--production
+	width: 100%
+	max-width: 900px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.production_h2
+  color: #6b6966
+  margin: 70px 0 30px 0
+
+.production_figcaption
+  text-align: center
+
+.production_firstSection
+	display: flex
+	justify-content: space-between
+
+.production_p--figure
+  margin: 0
+  display: flex
+  justify-content: center
+
+.production_img
+  width: 219px
+  height: 240px
+  -webkit-transform-origin: bottom
+  transform: scale(1)
+
+.production_firstElement, .production_secondElement, .production_thirdElement,
+.production_forthdElement
+	transform: scale(0.99)
+
+.production_firstElement:hover,
+.production_secondElement:hover,
+.production_thirdElement:hover,
+.production_forthdElement:hover
+		transform: scale(1)
+
+.production_p--price
+  margin-top: 26px
+  text-align: center
+  font-size: 17px
+  font-family: roboto-example
+  font-weight: bold
+  color: #6b6966
+
+.production_figcaption span
+  font-size: 13px
+  color: #000000
+
+.production_figcaption
+  font-size: 11px
+  color: #000000
+  padding: 16px 0
+
+.production_circle
+  display: flex
+  justify-content: center
+  margin: 0 0 11px 0
+
+.production_a--firstCircle, .production_a--secondCircle, .production_a--thirdtCircle,
+.production_a--fortthtCircle, .production_a--fifitCircle
+  width: 14px
+  height: 14px
+  border-radius: 50%
+  background-color: #898989
+  display: inline-block
+  cursor: pointer
+
+.production_circle div:first-child
+  margin-left: 0
+
+.production_second, .production_third,
+.production_forth, .production_fifth
+	display: none
+
+.production_a--firstCircle
+	 background-color: #04a562
+   transition: .3s ease-in-out
+
+.production_circle--green
+	 transition: .3s ease-in-out
+	 background-color: #04a562
+
+.production_a--firstCircleAdd
+	 background-color: #898989
+	 transition: .3s ease-in-out
+
+.production_circle div
+	 padding: 12px
+	 cursor: pointer
+
+.production_secondCircle, .production_a--thirdtCircle, .production_fortthtCircle
+	margin-left: 7px
+
+.production_fortthtCircle
+	margin-right: 7px
+
+.production_figure
+	background-color: white
+	width: 221px
+	height: 352px
+
+.production_firstElement--sub:hover, .production_secondElement--sub:hover,
+.production_thirdElement--sub:hover
+	transform: scale(1)
+
+.production_firstElement--sub
+  width: 221px
+
+figure.production_figure
+  // margin-left: 12px
+
+.production_figure
+  background-color: white
+
+.production_p--figure
+  margin: 0
+  display: flex
+  justify-content: center
+
+img.production_img--sub
+  width: 221px
+  height: 242px
+  transform: scale(1)
+
+p.production_p--vendoreCode
+  margin-bottom: 0
+  color: #557dff
+  text-align: center
+  margin: 2px 0
+  font-size: 13px
+
+.production_figcaption--sub
+  margin-bottom: 0
+  color: #484747
+  text-align: center
+  font-size: 11px
+  line-height: 1.2
+
+.production_figcaption--sub span
+  font-size: 13px
+  color: #6b6966
+
+p.production_p--priceSub
+  padding: 0
+  text-align: center
+  font-size: 15px
+  font-weight: bold
+  color: #6b6966
+
+#correction_childProduct--width
+	width: 683px
+
+p.production_p--vendoreCode
+  color: #557dff
+  text-align: center
+
+p.production_p--dificult
+  font-size: 12px
+  text-align: center
+  line-height: 1.4
+  margin: 0
+
+
+/*ABOUT*/
+.about
+  width: 100%
+  max-width: 685px
+
+h1.about_h1--page
+	margin-bottom: 7px!important
+
+.about_h2, .about_p
+  font-size: 21px
+  font-family:
+  font-weight: normal
+  line-height: 1.2
+  color: #201600
+
+h2.about_h2
+  text-transform: uppercase
+  margin: 69px 0 32px 0
+
+
+h2.about_text--h2
+  margin-left: 17px
+  font-size: 20px
+  margin-bottom: 0
+
+.about_p--page b
+	font-size: 18px
+
+p.about_p--page
+  text-align: justify
+  font-size: 17px
+
+
+/*NEWS*/
+.news_main
+  display: flex
+  max-width: 900px
+  width: 100%
+  justify-content: space-between
+
+
+h2.news_h2
+	text-align: left
+	font-size: 24px
+	font-weight: 400
+	text-transform: uppercase
+	margin: 68px 0 36px 0
+
+.news_p--figure
+	margin-bottom: 8px
+
+.news_img
+  width: 289px
+  height: 160px
+
+.news
+  width: 100%
+  max-width: 900px
+
+figcaption.news_figcaption
+  text-align: center
+  font-size: 16px
+  font-family:
+  text-transform: uppercase
+  color: #406198
+
+.news_p--price
+  color: #585551
+  font-size: 14px
+  line-height: 1.2
+
+.news_p--price span
+  color: #afaeae
+
+.news_p--data
+  text-align: right
+  font-size: 14px
+  margin-bottom: 9px
+
+a.news_a
+	color: #fff
+	padding: 8px 35px 8px 25px
+	background-color: #58534f
+	text-transform: uppercase
+	font-size: 19px
+
+.news_a:hover
+	background-color: #009b5c
+
+.news_a:active
+	background-color: #009b5c
+	color: #ffffff
+
+.main_child--firstElement
+  display: flex
+  margin-bottom: 44px
+
+p.main_child--textData, .main_child--button
+  padding-left: 30px
+
+
+/*PARTNERS*/
+.partners
+	width: 100%
+	max-width: 900px
+
+.partners_icon
+  width: 100%
+  max-width: 1140px
+
+.partners_h2
+  text-transform: uppercase
+  font-family:
+  font-weight: normal
+  font-size: 24px
+  color: #000000
+  margin-top: 109px
+
+.partners_circle
+  text-align: center
+  margin-top: 20px
+  margin-bottom: 83px
+
+.partners_circle div
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  background-color: #898989
+  display: inline-block
+  cursor: pointer
+  margin-left: 30px
+
+.partners_circle div:first-child
+  margin-left: 0
+
+.partners_circle--green
+	 transition: .3s ease-in-out
+	 background-color: red
+
+.partners_icon
+  width: 100%
+  max-width: 1140px
+  display: flex
+  justify-content: space-between
+
+img.partners_img--first
+  width: 146px
+  height: 145px
+
+img.partners_img--second
+  width: 165px
+  height: 164px
+
+img.partners_img--third
+  width: 157px
+  height: 156px
+
+img.partners_img--forth
+  width: 169px
+  height: 116px
+
+img.partners_img--fifth
+  width: 174px
+  height: 129px
+
+
+
+
+
+// /*patners end*/
+//
+// /* start popup + answer*/
+//
+
+div#parent_popup
+  display: none
+  background: rgba(8,34,71,.8)
+  height: 100%
+  position: fixed
+  width: 100%
+  z-index: 100
+  top: 0
+  left: 0
+  justify-content: center
+  align-items: center
+
+#popup
+	transform: scale(.7)
+	width: auto
+	height: auto
+	background-color: #0984b1
+	position: fixed
+	color: #f000
+
+#popup_answer
+	transform: scale(.7)
+	margin-top: 330px
+	background-color: #0984b1
+	display: none
+	z-index: 10000
+	position: fixed
+
+#popup_answer p
+	line-height: 1.5
+	padding: 21px 62px 10px 62px
+	font-size: 21px
+	color: white
+	text-align: center
+
+ form
+   background-color: white
+
+form label
+  display: block
+
+form p
+  text-align: center
+
+.popup form .full
+  grid-column: 1 / 3
+
+div#button, form input, form textarea
+  width: 100%
+  padding: 1em
+  border: 1px solid #c9e6ff
+
+input
+  width: 440px
+  color: white!important
+
+input[type="text"]
+  width: 440px
+
+form input::placeholder
+  background-color: #0984b1;
+  color: white
+
+textarea#message
+	// color: wheat
+	margin-top: 27px
+
+input[type="text"],input[type="number"],  input[type="email"], input[type="password"], textarea, input[value=""]:required:invalid
+	margin: 0
+	padding: 10px 16px
+	box-sizing: border-box
+	background: none
+	border: 0
+	border-bottom: solid 3px #c1c8d1
+	border-radius: 0
+	font-size: 15px
+	line-height: 24px
+	outline: none
+	// color: #3d3d3d
+	color: white
+	width: 440px
+	background: #0984b1
+	margin: 12px 50px
+
+#message
+	width: -webkit-fill-available
+	width: -moz-available
+
+div#button
+	width: -webkit-fit-content
+  width: -moz-fit-content
+  width: fit-content
+	text-align: center
+	cursor: pointer
+	background-color: #053648
+	color: white
+	padding: 8px 30px
+	margin: 0 auto
+	border: 0
+	text-transform: uppercase
+
+
+div#button:hover
+  background-color: #3161a9
+  // color: #fff
+  outline: 0
+
+div#button a
+  background-color: #0f428b
+  // color: white!important
+  padding: 10px
+
+form#form
+	background-color: #0984b1
+	margin-top: -21px
+
+h4
+  text-align: center
+  // color: white
+  font-size: 26px
+  font-weight: normal
+
+div#button:hover
+  background-color: #3a4d6c
+
+p#cross
+  margin: -13px 0 0 0
+  font-size: 35px
+  text-align: center
+  color: white
+  cursor: pointer
+  text-align: right
+
+
+p#cross:hover
+	font-weight: bold
+							// .production_img--waterPurification
+							//     width: 288px
+							//     height: 332px
+							//     -webkit-transform-origin: bottom
+							//     -webkit-transform: scale(1)
+							//     -ms-transform: scale(1)
+							//     transform: scale(1)
+
+
+/*FOOTER*/
+footer
+  background-color: #182b32
+  width: 100%
+  display: flex
+  justify-content: center
+  flex: 0 0 auto
+
+.footer_gasket
+	margin:
+	width: 100%
+	max-width: 900px
+
+.footer_firstLine
+  padding-top: 33px
+
+.footer_firstLine
+  display: flex
+  justify-content: space-between
+
+.footer_figcaption
+  color: white
+
+.footer_li
+  list-style: none
+  font-family:
+  font-size: 14px
+  font-weight: normal
+  margin-bottom: 13px
+
+.footer_a
+  color: #f0f1f1
+
+.footer_p--firstLine
+  color: #9ac459
+  font-size: 18px
+  font-family:
+  line-height: 1.3
+
+.footer_p--secondLine
+  // margin-top: 45px
+
+.footer_secondLine
+  display: flex
+  justify-content: space-between
+
+p.footer_p--secondLine
+  text-align: center
+  color: #f0f1f1
+  font-size: 13px
+  font-family: roboto-example
+
+.footer_img
+  width: 280px
+  height: 76px
+
+.footer_figcaption
+  color: white
+  margin-left: 89px
+  margin-top: -35px
+  font-size: 19px
+
+.footer_firstLine figure
+	margin-bottom: 9px
+
+.footer_a
+  color: #f0f1f1
+
+.footer_a:hover
+  color: #f0f1f1
+
+.footer_secondLine
+	display: flex
+
+
+/*CHILD*/
+.child_page
+	background-color: #e8e8e8
+	width: 100%
+	display: flex
+	justify-content: center
+	flex: 1 0 auto
+
+.child_nav
+	margin-top: 54px
+	display: flex
+	align-items: center
+	font-size: 24px
+	font-family: roboto-light
+
+a.child_main
+  text-decoration: underline
+  color: #00affa
+
+a.child_main:hover
+	text-decoration: none
+	color: #00affa!important
+
+a.child_child
+	text-decoration: underline
+
+a.child_child:hover
+	text-decoration: none
+
+.child_symbol
+	color: #7f7d7c
+	margin: 0 7px
+	font-family:
+	font-size: 16px
+
+.child_child, .child_child--last
+  color: #7f7d7c
+
+.child_child:hover, .child_child--last:hover
+	color: #7f7d7c
+
+h1.child_h1
+  line-height: 1.3
+  font-size: 24px
+  font-weight: normal
+  color: #585551
+  text-transform: uppercase
+  text-align: left
+  margin: 26px 0 33px 0
+
+.child_nav, .child_page--body
+  max-width: 755px
+  width: 100%
+
+.child_cover
+  width: 100%
+  max-width: 900px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+.child_nav a
+	font-size: 16px
+	font-family:
+
+
+/*EQUIPMENTS*/
+.main_p--filters
+	background-color: #87a1b6
+
+.main_p--ozonizer
+  background-color: #79d4c9
+
+.main_a--ozonizer
+  color: white
+
+.main_a--filters
+  color: #00416a
+
+.main_a--filters:hover
+  text-decoration: none
+  color: none
+
+.main_a--ozonizer:hover
+  color: #fff
+
+.main_p--filters:hover, .main_p--ozonizer:hover,
+.main_p--cleaning:hover, .main_p--equipment:hover,
+.main_p--cleaningDrains:hover, .main_p--equipment:hover,
+.main_p--clearningAir:hover, .main_p--systemClearning:hover,
+.main_p--bottling:hover
+  font-size: 32
+  font-weight: 700
+
+.main_equipments--sub
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+
+.child_dificult
+  margin-bottom: 73px
+
+
+/*SERVICES*/
+div#correction_child-services
+  margin-left: 48px
+  justify-content: flex-start
+
+
+/*PROJECT*/
+#correction_childProject a
+	color: #585551
+	font-size: 17px
+
+#correction_childProject a:hover
+	font-weight: bold
+	color: #585551
+  font-size: 17px
+
+
+/*GALLERY*/
+.main_child--picture
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+
+.main_child--wrapper
+  width: 247px
+  height: 240px
+  margin-bottom: 5px
+  align-items: center
+  background-color: white
+  display: flex
+  justify-content: center
+
+.main_child--wrapper:hover
+	transform: scale(1.1)
+
+img.main_child--img
+  max-width: 205px
+  max-height: 205px
+
+
+/*CONTACT*/
+div#correction_childContact
+  display: flex
+
+iframe.contacts_map, .contacts_p--name
+  margin-top: 27px
+
+iframe.contacts_map
+  margin-right: 30px
+
+span.contacts_p--span
+  font-size: 15px
+  font-weight: bold
+  text-transform: uppercase
+
+p.contacts_p--name
+	font-weight: normal
+  font-size: 15px
+
+a.contacts_a
+  font-size: 19px
+  color: black
+
+a.contacts_a:hover
+	font-weight: normal
+	color: black
+
+
+/*FILTERS*/
+/*water water-purification*/
+h2.child_h2
+  margin-top: 51px
+  text-transform: uppercase
+  font-weight: 400
+  font-size: 21px
+
+.main_equipments--sub
+  margin-bottom: 68px
+
+
+/*ABOUT*/
+.about_benefits
+  margin-bottom: 39px
+
+.about_figure
+  display: flex
+
+.about_figure figure
+	text-align: center
+
+h2.about_text--h2
+	margin-left: 17px
+
+.about_figure
+  display: flex
+  justify-content: space-around
+
+.about_figure--img
+	 width: 100px
+	 height: 100px
+
+.about_figure figcaption
+	text-transform: uppercase
+	font-size: 12px
+	font-weight: bold
+
+.about_figure figcaption
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: bold
+
+.about_figure--img
+	 width: 100px
+	 height: 100px
+
+
+/*REQ*/
+.reg
+  display: flex
+  font-size: 16px
+
+.reg_p--name, .reg_p--data
+  white-space: nowrap
+
+.reg_p--name
+  text-align: left
+
+.reg_p--data
+  text-align: right
+  font-weight: bold
+
+
+/*PATENT*/
+img.main_child--imgPatents
+  cursor: pointer
+  max-width: 335px
+  max-height: 335px
+  margin-bottom: 13px
+
+.main_child--imgPatents:hover
+	transform: scale(1.8)
+
+/*article*/
+.main_child--firstElement
+  display: flex
+  margin-bottom: 44px
+
+.main_child--button
+	font-size: 13px
+
+
+/*SALES*/
+.main_child--sales h2, .main_child--news h2
+	font-size: 20px
+
+.main_child--sales p, .main_child--news p
+	font-size: 17px
+	text-align: justify
+
+
+/*DATA PRODUCT*/
+// div#correction_child--equipmentsWidth
+//   margin-bottom: 70px
+
+.main_child--prodictFigure, .main_child--ProductSecondLine,
+.main_child--wrapperP
+	display: flex
+
+.main_child--ProductWpapperPhoto .main_child-ProductWrapperImgTop img
+	margin: 0 91px 17px 0
+	width: 279px
+	height: 307px
+
+.main_child-ProductWrapperImgTop img:hover
+  transform: scale(1.4)
+
+.main_child--ProductSecondLine
+	max-width: 280px
+	justify-content: space-between
+
+.main_child-ProductWrapperImgBottom img
+  height: 144px
+  width: 131px
+
+.main_child-ProductWrapperImgBottom img:hover
+	transform: scale(2.8)
+
+.main_child--ProductArticle
+	color: #557dff
+	font-size: 18px
+
+.main_child--ProductSpecification
+	color: #717171
+	font-size: 12px
+	text-align: justify
+
+.main_child--ProductPrice
+	font-size: 24px
+	font-weight: bold
+	color: #6b6966
+
+.main_child--ProductFree
+	color: #ffffff
+	background-color: #58544e
+	padding: 12px 27px 9px 20px
+	text-transform: uppercase
+	font-size: 18px
+	font-family:
+	font-weight: 100
+	margin-top: 98px
+	display: inline-block
+	margin: 98px 0 0 0
+
+.main_child--ProductFree:hover
+	background-color: #757069
+
+.main_child--description p
+	font-size: 17px
+
+.main_child--wrapperP
+	color: #7f7d7c
+	justify-content: space-between
+
+.main_child--leftP
+	margin: 4px 0 4px 7px
+
+.main_child--rightP
+	margin: 4px 7px 4px 0
+
+.main_child--productText p
+	line-height: 1.2
+	text-align: justify
+
+.child__article--a:hover
+	color: #0048ff
+
+.main_child--ProductWpapperPhoto
+  max-width: 280px
+
+
+.main_child--productText p
+	font-size: 17px
+
+.child__article--a b
+	font-size: 17px
+
+p.main_child--titleCharacteristic
+	color: #585551
+	margin-top: 43px
+	margin-bottom: 2px
+	font-size: 20px
+	font-weight: bold
+
+p.main_child--titleDescription
+	font-size: 20px
+	font-weight: bold
+	color: #585551
+	margin: 30px 0 10px 0
+
+
+.child_dificult--waterTreatment p,
+	text-align: justify
+
+.child_dificult--comparison p
+	text-align: justify
+	font-size: 17px
+	line-height: 1.2
+
+p.main_child--titleDescription
+	font-family:
+
+
+/*TOGLE*/
+.top_line
+ width: 100%
+ height: auto
+ background-color: #009dc6
+ position: relative
+
+.toggle
+	position: relative
+	top: 50%
+	left: 50%
+	transform: translate(-50%,0%)
+	width: 50px
+	height: 50px
+	background-color: #009dc6
+	// box-shadow: 0 5px 10px rgba(0,0,0,.5)
+	border-radius: 3px
+	cursor: pointer
+	z-index: 10
+	span
+		position: absolute
+		width: 34px
+		height: 4px
+		display: block
+		background-color: white
+		top: 50%
+		left: 50%
+		transform: translate(-50%,0%)
+		// box-shadow: 0 3px 3px rgba(0,0,0,.3)
+		border-radius: 2px
+		transition: .5s
+		transition-delay: .5s
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background-color: white
+			display: block
+			top: -10px
+			left: 0
+			border-radius: 2px
+			box-shadow: 0 3px 3px rgba(0,0,0,.3)
+			transition-property: top
+			transition-delay: .3s
+			transition-duration: .3s
+		&:after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background-color: white
+			display: block
+			top: 10px
+			left: 0
+			border-radius: 2px
+			box-shadow: 0 3px 3px rgba(0,0,0,.3)
+			transition-property: top
+			transition-delay: .3s
+			transition-duration: .3s
+.active
+	span
+		background-color: transparent
+		box-shadow: 0 3px 3px rgba(0,0,0,0)
+		&:before
+			top: 0
+			transform: rotate(45deg)
+			transition-delay: .3s
+		&:after
+			top: 0
+			transform: rotate(-45deg)
+			transition-delay: .3s
+
+
+figcaption.main_child--figcaption
+    font-size: 12px
+    text-transform: uppercase
+    color: #406198
+    white-space: nowrap
+    text-align: center
+
+.main_child--textDataWrapper
+    display: flex
+    -ms-flex-pack: justify
+    justify-content: space-between
+
+p.main_child--textData
+    text-align: justify
+    color: #585551
+    font-size: 15px
+
+.main_child--productFigcaption
+	margin-left: 64px
+
+i.fa.fa-vk
+  font-size: 30px
+
+i.fa.fa-vk
+  margin-top: 10px
+
+
+a i.fa.fa-vk
+  color: black
+
+
+
+
+/*MEDIA QUERIES*/
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px)
+
+	.main_child--productFigcaption
+		margin-left: 64px
+
+	img.production_img
+	  width: 177px
+	  height: 194px
+
+	.production_figure
+	  width: 177px
+	  height: 282px
+
+	.production_figcaption
+	  padding: 4px 0
+
+	.production_figcaption span
+	  font-size: 12px
+
+	.production_p--price
+	  margin-top: 10px
+	  font-size: 15px
+
+	.news_img
+    width: 220px
+    height: 124px
+
+	figcaption.news_figcaption
+    text-align: center
+    font-size: 13px
+
+	.news_p--price
+    font-size: 12px
+
+	.news_p--data
+    font-size: 12px
+
+	a.news_a
+    padding: 6px 26px 6px 23px
+    font-size: 16px
+
+	img.partners_img--second
+    width: 148px
+    height: 164px
+
+	img.partners_img--third
+    width: 143px
+
+	img.partners_img--forth
+    width: 158px
+
+	img.partners_img--fifth
+    width: 168px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 900px)
+
+	header, .benefits, main,.services, .production_cover,
+	.about, .news, .partners, footer
+		padding: 0 10px
+
+	div#correction_child--equipmentsWidth
+		padding-right: 10px
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	img.production_img
+	  width: 177px
+	  height: 194px
+
+	.production_figure
+	  width: 177px
+	  height: 282px
+
+	.production_figcaption
+	  padding: 4px 0
+
+	.production_figcaption span
+	  font-size: 12px
+
+	.production_p--price
+	  margin-top: 10px
+	  font-size: 15px
+
+	.news_img
+    width: 220px
+    height: 124px
+
+	figcaption.news_figcaption
+    text-align: center
+    font-size: 13px
+
+	.news_p--price
+    font-size: 12px
+
+	.news_p--data
+    font-size: 12px
+
+	a.news_a
+    padding: 6px 26px 6px 23px
+    font-size: 16px
+
+	header, .benefits, main,.services, .production_cover,
+	.about, .news, .partners, footer
+		padding: 0
+
+	div#correction_child--equipmentsWidth
+		padding-right: 10px
+
+	header, .topmenu, .benefits,
+	.main_products,
+	.production_cover--production,
+	.news, .partners, .footer_gasket
+		max-width: 700px
+
+	.main_h2, .services_h2, .about_h2,
+	.partners_h2, .partners_h2
+	  font-size: 20px
+
+	.main_p, .about_p
+		font-size: 18px
+
+
+	/*HEADER*/
+	.header_logo>a>img
+    width: 185px
+    height: 50px
+
+	.header_p--phone
+		font-size: 16px
+
+	.header_p--mail
+    font-size: 14px
+
+	.header_p--conenction
+		font-size: 12px
+
+  /*NAV*/
+	nav
+		justify-content: center
+
+	.topmenu>li>a
+		font-size: 14px
+
+	.topmenu_link:after
+		margin-left: 10px
+
+	#catalog, #catalogDesctop
+    max-width: 115px
+
+	#aboutCompany, #aboutCompanyDesctop
+    max-width: 128px
+
+	.submenu a
+		font-size: 13px
+
+	#catalog li a, #catalogDesctop li a
+    padding: 8px 5px
+
+	#aboutCompany li a, #aboutCompanyDesctop li a
+		padding: 5px 9px
+
+	.article_p--first
+    font-size: 25px
+
+	.article_p--second
+    font-size: 22px
+
+	.article_circle div
+    padding: 6px
+
+	#article_fortthtCircle, #article_secondCircle, #article_thirdtCircle
+    margin-left: 11px
+
+	#article_fortthtCircle
+	  margin-right: 11px
+
+	.benefits_img
+	  width: 54px
+	  height: 53px
+
+	.benefits_figcaption
+		font-size: 10px
+
+	.main_text, .about
+    max-width: 489px
+
+	.main_p--bottling, .main_p--cleaning,
+	.main_p--cleaningDrains, .main_p--clearningAir,
+	.main_p--equipment, .main_p--filters, .main_p--ozonizer,
+	.main_p--systemClearning
+	  font-size: 16px
+  	width: 336px
+  	height: 77px
+
+ .services_design
+	  margin-left: 127px
+
+	.news_img
+    width: 220px
+    height: 124px
+
+	figcaption.news_figcaption
+    text-align: center
+    font-size: 13px
+
+	.news_p--price
+    font-size: 12px
+
+	.news_p--data
+    font-size: 12px
+
+	a.news_a
+    padding: 6px 26px 6px 23px
+    font-size: 16px
+
+	.footer_img
+    width: 250px
+    height: 70px
+
+	.footer_figcaption
+    font-size: 16px
+
+	.footer_p--firstLine
+    font-size: 16px
+
+	.footer_li
+    font-size: 13px
+
+	.child_nav
+		justify-content: flex-start
+
+	.child_nav, .child_page--body
+    max-width: 624px
+
+	.child_page
+		padding-right: 33px
+
+	 img.production_img--sub
+    width: 177px
+    height: 202px
+
+	.production_firstElement--sub
+    width: 178px
+
+	p.production_p--vendoreCode
+    font-size: 11px
+
+	.production_figcaption--sub span
+    font-size: 10px
+
+	p.production_p--dificult
+    font-size: 9px
+
+	p.production_p--priceSub
+    font-size: 10px
+
+	p.reg_p--name, p.reg_p--data
+    font-size: 13px
+
+	.main_child--productFigcaption
+    margin-left: 34px
+
+	iframe
+    display: none
+
+
+
+
+@media only screen and (max-width : 740px)
+
+	nav.nav_mobile
+    z-index: 1
+
+	nav.nav_tebletsDesctop
+		display: none
+
+  a#child_child--mobileNone
+    color: red
+
+
+	header, .benefits, main, .main_cover,
+	.services, .about, .partners
+		padding: 0 10px
+
+	.main_h2, .services_h2, .about_h2,
+	.partners_h2, .partners_h2
+	  font-size: 20px
+
+	.main_p, .about_p
+    font-size: 16px
+
+	/*HEADER*/
+	p.header_p--conenction
+		margin-right: 0
+
+	/*NAV*/
+	nav.nav_mobile
+    display: none
+
+	nav.nav_mobile > ul.topmenu
+    flex-direction: column
+
+	nav.nav_mobile > ul.topmenu > li#catalog,
+	nav.nav_mobile > ul.topmenu > li#aboutCompany
+		max-width: 100%
+
+	nav.nav_mobile >  ul.topmenu > li#aboutCompany > ul#aboutCompany,
+	nav.nav_mobile >  ul.topmenu > li#catalog > ul#catalog,
+	  max-width: 100%
+
+	.aboutCompany_wrapper, .catalog_wrapper, .wrapper_equipments,
+	.wrapper_solutions
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	nav.nav_mobile >  ul.topmenu > li#aboutCompany > .aboutCompany_wrapper a,
+	nav.nav_mobile >  ul.topmenu > li#catalog > .catalog_wrapper a
+    text-transform: uppercase
+    font-size: 14px
+    color: #000
+    text-decoration: none
+
+	.topmenu > li:hover .submenu
+	  opacity: 0
+	  transform: scaleY(0)
+
+	#icon_hide--catalog, #icon_hide--aboutCompany,
+	#icon_hide--solutions, #icon_hide--equipments
+    display: none
+
+	nav.nav_mobile >  ul.topmenu > li#aboutCompany > .aboutCompany_wrapper a,
+	nav.nav_mobile >  ul.topmenu > li#catalog > .catalog_wrapper a
+		margin-left: 36px
+
+	li#solutions
+    width: 100%
+
+	.catalog_wrapper
+    padding-top: 15px
+
+	.nav_a--wrapper i, .nav_a--wrapperSolitions i
+		padding: 0 10px
+		font-size: 23px
+		// margin-right: 20px
+
+	.nav_a--wrapperSolitions i, .nav_a--wrapperEquipmnets i
+		padding: 0 10px
+		font-size: 23px
+		// margin-right: 14px
+
+	li#equipments, li#solutions
+		width: 100%
+		padding-left: 35px
+
+	.wrapper_equipments a, .wrapper_solutions a, #aboutCompany li a
+		font-family: roboto-example
+
+	li.nav_li
+    border: none
+
+	.nav_li:hover
+    outline: none
+
+	// li#equipments a, ki#solutions a
+	// 	font-size: 18px
+
+
+	// .wrapper_equipments, .wrapper_solutions
+  //   padding-left: 15px
+
+
+	// .wrapper_equipments a.nav_a, .wrapper_solutions a.nav_a,
+	// 	font-size: 15px
+
+	ul#catalog, ul#aboutCompany
+	  padding-left: 29px
+
+
+	ul#aboutCompany li.nav_li a.nav_a,
+	ul#catalog li.nav_li a.nav_a
+		padding-left: 19px
+		font-size: 19px
+
+	.topmenu>li:hover
+    background-color: #009dc6
+
+	nav.nav_mobile ul.topmenu
+		top: 0
+
+	.nav_mobile>.topmenu>li>a, .nav_mobile>.topmenu>li>div
+    text-transform: uppercase
+    font-size: 18px
+    color: #000
+    text-decoration: none
+    padding: 10px 0 10px 20px
+    font-weight: 700
+    cursor: pointer
+    text-align: left
+
+
+ i#icon_hide--aboutCompany,
+ i#icon_hide--catalog,
+ i#icon_show--aboutCompany,
+ i#icon_show--catalog,
+ i#icon_show--solutions,
+ i#icon_hide--solutions,
+ i#icon_show--equipments,
+ i#icon_hide--equipments
+    font-size: 28px
+    font-weight: 800
+    padding: 0 20px
+
+	/*ARTCLE*/
+	.article_circle div
+    padding: 3px
+
+	.article_p--first
+    font-size: 22px
+
+	.article_p--second
+    font-size: 18px
+
+	.article_circle
+    margin: 83px 0 27px 0
+
+	.benefits
+		display: none
+
+
+	/*MAIN*/
+	.main_text
+    width: auto
+
+	p.about_p
+		text-align: justify
+
+
+	.main_products
+    flex-direction: column
+    align-items: center
+
+	.main_products
+    padding-bottom: 25px
+
+	.main_solutions
+    margin-left: 0
+
+	.main_p--bottling, .main_p--cleaning, .main_p--cleaningDrains,
+	.main_p--clearningAir, .main_p--equipment, .main_p--filters,
+	.main_p--ozonizer, .main_p--systemClearning
+		padding-left: 19px
+
+
+	/*SERVICES*/
+	.services_all
+    flex-direction: column
+
+	.services_design
+		margin-left: 0
+
+	.services_line
+    display: none
+
+	h2.services_h2
+    margin-top: 38px
+
+	.services_h3
+    margin: 0
+
+	.service_p, .service_p--right
+    margin-bottom: 28px
+
+	.services_left--a
+    margin-bottom: 69px
+
+	/*PRODUCRION*/
+	.production_cover
+  	display: none
+
+	/*ABOUT*/
+	.about_h2
+		text-align: center
+
+	h2.about_h2
+    margin-bottom: 12px
+
+
+	/*NEWS*/
+	.news
+		display: none
+
+	/*PARTNERS*/
+	.partners_icon
+    align-items: center
+
+	.partners_h2
+    text-align: center
+
+	img.partners_img--third
+	   margin-top: -18px
+
+	img.partners_img--forth
+    margin-top: -34px
+
+	img.partners_img--fifth
+    margin-top: -19px
+
+	h2.partners_h2
+    margin-top: 30px
+
+
+	.partners_icon
+	  display: flex
+	  flex-direction: column
+
+	/*FOOTER*/
+	.footer_firstLine , p.footer_p--firstLine
+    display: none
+
+	.footer_secondLine
+    justify-content: center
+
+
+	p.footer_p--secondLine
+    padding-top: 11px
+
+	/*EQUIPMENTS*/
+	.main_equipments--sub
+    flex-direction: column
+    align-items: center
+
+	h1#child_h1
+    font-size: 20px
+    text-align: center
+
+	#nav_delete
+    display: none
+
+	.child_page
+    padding-right: 0
+
+	#correction_childProduct--width
+    width: 109%
+
+
+	.child_nav, .child_page--body
+    max-width: 100%
+
+	nav.child_nav
+		padding: 0 10px
+		justify-content: flex-start
+		margin-top: 23px
+
+
+	h1.child_h1
+		text-align: center
+
+	.main_child--prodictFigure,
+	.main_child--ProductSecondLine
+		display: block
+
+	.main_child--ProductWpapperPhoto,
+	.main_child--ProductSecondLine
+    text-align: center
+    max-width: 100%
+
+	.main_child--ProductWpapperPhoto .main_child-ProductWrapperImgTop img
+		margin: 0
+
+	p.main_child--ProductArticle, .main_child--ProductPrice
+    text-align: center
+
+	p.main_child--ProductSpecification,
+	p.main_child--ProductFree
+    display: none
+
+	.main_child--product
+	    padding: 0 5px
+
+	.main_child-ProductWrapperImgTop img:hover
+    transform: scale(1)
+
+	.main_child-ProductWrapperImgBottom img
+    width: 279px
+    height: 307px
+
+	.main_child-ProductWrapperImgBottom
+    margin-top: 10px
+
+
+	.main_child-ProductWrapperImgBottom img:hover
+    transform: scale(1)
+
+
+	.main_child--productFigcaption
+    margin-left: 0
+
+	.child_dificult
+    margin-bottom: 33px
+
+	h2.child_h2
+    text-align: center
+
+	.main_child--productText img
+		display: none
+
+	div#correction_child-services
+    margin-left: 0
+
+	.first_project p, .second_project p,
+	.thirdt_project p
+		text-align: center
+
+	div#correction_childContact
+    padding: 0 10px
+
+	div#correction_child--equipmentsWidth
+    padding: 0 10px
+
+	.about_benefits
+    display: none
+
+	.main_child--firstElement
+		flex-direction: column
+
+	p.main_child--p
+    text-align: center
+
+	.main_child--button,
+	p.main_child--textData
+	   padding-left: 0
+
+	figcaption.main_child--figcaption
+    font-size: 17px
+
+	.main_child--sales h2, .main_child--news h2
+		text-align: center
+
+	#popup
+	    transform: scale(.5)
+
+	#popup_answer
+		position: absolute
+		top: 50%
+		height: 200px
+		margin-top: -100px
+		transform: scale(.5)
+
+
+	input[type=email], input[type=number],
+	input[type=password], input[type=text],
+	input[value=""]:required:invalid, textarea
+	   font-size: 25px
+
+	.main_child--productText p, .main_child--description p,
+	.child_dificult--waterTreatment p,
+	.main_child--news p, .main_child--sales p,
+	p.about_p--page
+		font-size: 16px
+
+	.main_child--ProductArticle
+		font-size: 17px
+
+	p.footer_p--secondLine
+		font-size: 10px
+
+	.main_child--ProductPrice, h1.child_h1
+		font-size: 22px
+
+	.child_nav a
+    font-size: 15px
+
+	h1.child_h1
+    margin: 17px 0 17px 0
+
+	h2
+    line-height: 1.3
+
+	div#button
+  	font-size: 22px
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+
+	/*ALL*/
+
+	.services_h2, .main_h2, .about_h2,
+	.partners_h2, .partners_h2
+	  font-size: 18px
+
+
+	.main_p, .about_p
+	  font-size: 14px
+
+	header
+	 display: flex
+	 flex-direction: column
+	 margin: 20px 0 10px 0
+
+	header
+	  align-items: center
+
+	div#logo
+	  order: 1
+
+	.header_conenction
+	  order: 3
+
+	.header_contact
+	  order: 2
+
+	.header_logo>a>img
+	  width: 205px
+	  height: 55px
+
+	.header_p--phone
+	  font-size: 18px
+
+	.header_p--mail
+	  font-size: 16px
+	  text-align: center
+
+	/*MAIN*/
+
+	.main_p--bottling, .main_p--cleaning, .main_p--cleaningDrains,
+	.main_p--clearningAir, .main_p--equipment, .main_p--filters,
+	.main_p--ozonizer, .main_p--systemClearning
+	  font-size: 16px
+	  width: 304px
+	  height: 77px
+
+	.main_h2
+	 margin-bottom: 10px
+
+	/*SEVICES*/
+
+	.services_h3
+	  font-size: 17px
+
+	.service_p, .service_p--right
+	  font-size: 18px
+
+	a.service_a
+	  background-color: #898989
+	  color: #fff
+	  padding: 13px 35px 12px 25px
+	  font-size: 18px
+
+	.main_child--productText p, .main_child--description p,
+	.child_dificult--waterTreatment p,
+	.main_child--news p, .main_child--sales p,
+	p.about_p--page
+    font-size: 14px
+
+	.main_child--ProductArticle
+		font-size: 15px
+
+	.main_child--ProductPrice, h1.child_h1
+		font-size: 20px
+
+	.child_nav a
+    font-size: 14px
+
+	h1.child_h1
+    margin: 11px 0 12px 0
+
+
+
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.allWrapper
+    margin-left: 0
+
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+@media only screen and (min-width : 740px)
+
+	.nav_mobile, .top_line, i#icon_hide--aboutCompany,
+	i#icon_hide--catalog, i#icon_hide--equipments, i#icon_hide--solutions,
+	i#icon_show--aboutCompany, i#icon_show--catalog, i#icon_show--equipments,
+	i#icon_show--solutions
+		display: none
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+
+/*==========  iPad в landscape  ==========*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+
+	.main_child--productFigcaption
+	  margin-left: 64px
+
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+
+	.main_child--productFigcaption
+	  margin-left: 34px
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
