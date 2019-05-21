@@ -5,7 +5,8 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
-	
+  body
+    display: none
 }
 
 // ≥992px
@@ -43,5 +44,5 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
-	
+
 }

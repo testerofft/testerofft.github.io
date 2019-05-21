@@ -1,264 +1,371 @@
 @import "vars"
 
+
 /*==========  Desktop First  ==========*/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 1024px)
-
-
-	/*PRODUCTION*/
-	// img.production_img
-	//   width: 167px
-	//   height: 194px
-	//
-	// .production_figure
-	//   width: 177px
-	//   height: 282px
-	//
-	// .production_figcaption
-	//   padding: 4px 0
-	//
-	// .production_figcaption span
-	//   font-size: 12px
-	//
-	// .production_p--price
-	//   margin-top: 10px
-	//   font-size: 15px
-	//
-	// .news_img
-  //   width: 220px
-  //   height: 124px
-	//
-	// figcaption.news_figcaption
-  //   text-align: center
-  //   font-size: 13px
-	//
-	// .news_p--price
-  //   font-size: 12px
-	//
-	// .news_p--data
-  //   font-size: 12px
-	//
-	// a.news_a
-  //   padding: 6px 26px 6px 23px
-  //   font-size: 16px
-
-	/*PARTNERS8/
-	img.partners_img--second
-    width: 148px
-    height: 164px
-
-	img.partners_img--third
-    width: 143px
-
-	img.partners_img--forth
-    width: 158px
-
-	img.partners_img--fifth
-    width: 168px
-
-	// img.partners_img--first
-  //   width: 135px
-  //   height: 135px
-  //
-	// img.partners_img--second
-  //   width: 140px
-  //   height: 140px
-  //
-	// img.partners_img--third
-  //   width: 140px
-  //   height: 140px
-  //
-	// img.partners_img--forth
-  //   width: 140px
-  //   height: 116px
-  //
-	// img.partners_img--fifth
-  //   width: 144px
-  //   height: 116px
+// ≥1024x
++media-breakpoint-down(lg)
+  footer .footer_wrapper .ul_wrapper ul li a
+    font-size: 9.5px
 
 
 
-	/*all*/
-	// body
-		// padding: 0 10px
+// ≥992px
++media-breakpoint-down(md)
+
+  a.header_callBack
+    // margin-left: 0
+
+  .main_secondColumn, nav,
+  .header_figure,
+  .ul_wrapper
+    margin-right: 15px
+
+  nav
+    margin-left: 10px
+    justify-content: space-between
+
+  nav a
+    margin-right: 11px
+
+  .main_firstColumn,
+  .header_div--img,
+  .header_nameCity
+    margin-left: 5px
+
+  .main_call--main figcaption span
+    flex-wrap: nowrap
+    display: flex
+    justify-content: center
+
+  footer .footer_wrapper .ul_wrapper ul li a
+      color: #7f7d7c
+      font-size: 8px
+
+  img.whereToSleep
+    width: 464px
+    height: 150px
+
+  figure.place_check
+      flex-basis: 151px
+
+  img.galery
+    width: 151px
+    height: 193px
+
+  .main_secondColumn
+    margin-left: 21px
+
+  .main_almatinskai figure, .main_domodoedovskai figure,
+  .main_marino figure, .main_tcaricino figure
+    margin-bottom: 0
 
 
-	// article
-  //   max-width: 1024px
-	//
-	// .main_products, .benefits
-	// 	max-width: 800px
 
+// ≥768px
++media-breakpoint-down(sm)
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-
-  	img.partners_img--first
-      width: 135px
-      height: 135px
-
-  	img.partners_img--second
-      width: 140px
-      height: 140px
-
-  	img.partners_img--third
-      width: 140px
-      height: 140px
-
-  	img.partners_img--forth
-      width: 140px
-      height: 116px
-
-  	img.partners_img--fifth
-      width: 144px
-      height: 116px
-
-
-
-
-@media only screen and (max-width : 740px)
-
-  .production_cover
+  .header_div--img
     display: none
 
-
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-
-  .production_cover
+  p.header_nameCity
     display: none
 
-  .services_h2, .main_h2, .about_h2,
-  .partners_h2, .partners_h2
-    font-size: 18px
+  .header_nameCity--wrapper
+    flex-basis: 0
 
-  .main_p, .about_p
-    font-size: 14p
+  .header_logoTop
+    display: block
+    flex-basis: 400px
+    margin-left: 10px
 
-  header
-   display: flex
-   flex-direction: column
-   margin: 20px 0 10px 0
+  img.header_logoTop--img
+    width: 78px
+    height: 25px
 
-  header
-    align-items: center
+  .main_firstColumn
+    display: none
 
-  div#logo
-    order: 1
+  nav a
+    margin-right: 0
 
-  .header_conenction
-    order: 3
+  footer ul
+    display: none
+    flex-basis: 0
 
-  .header_contact
-    order: 2
+  .main_secondColumn
+    flex-basis: 100%
+    margin-left: 20px
+    margin-right: 20px
 
-  .header_logo>a>img
-    width: 205px
-    height: 55px
+  nav
+    padding: 10px 0
+    a
+      font-size: 10px
 
-  .header_p--phone
-    font-size: 18px
+  img.promo_img--metro
+    width: 25px
+    height: 20px
 
-  .header_p--mail
+  p.promo_p--metro
+    font-size: 11px
+
+  .promo_figure--logoName img
+    height: 110px
+    width: 110px
+    margin-top: 56px
+
+  .promo_figcaption--logoName span
+    text-transform: uppercase
+    font-size: 43px
+
+  h1
+    font-size: 54px
+
+  footer
+    padding: 15px 0
+    .footer_wrapper .img_wrapper
+      flex-basis: 100%
+    .footer_wrapper .ul_wrapper
+      flex-basis: 0
+
+  .main_more--div
+    display: flex
+    justify-content: flex-end
+
+  a.main_more--main
+    margin-right: 21px
+    margin-top: -21px
+
+  .main_more--div.last
+    // margin-top: 30px
+    margin-bottom: 41px
+
+  .main_more--div
+    display: flex
+
+  .promo_wrapper.chilld
+    height: 70px
+
+  figure.place_check
+    flex-basis: 182px
+
+  img.galery
+      width: 179px
+
+  h2.main_secondColumnH2
+    margin-top: 16px
+
+
+
+
+
+// ≥576px
++media-breakpoint-down(xs)
+
+  .header_bottom--wrapper
+    display: none
+
+  .header_bottom--wrapper.mobile
+    display: flex!important
+    position: absolute
+    z-index: 1
+    nav
+      flex-direction: column
+      height: 444px
+
+  .header_top
+    flex-direction: column
+
+  .header_logoTop
+    flex-basis: 30px
+
+  figure.header_figure
+    flex-basis: 30px
+    margin-top: 4px
+    margin-bottom: 8px
+
+  .header_callBack--wrapper
+    flex-basis: 30px
+    margin-top: 10px
+
+  a.header_callBack:before
+  	position: absolute
+  	top: 79px
+  	width: 100px
+  	content: ''
+  	height: 2px
+
+  .header_top--wrapper
+    background-color: white
+
+  figure.promo_figure--logoName
+    display: none
+
+  .promo_columns--wrapper
+    flex-direction: column
+
+  .promo_columns
+    background-color: initial
+
+  .promo_columns
+    position: relative
+    height: 100%
+    background-color: #6aa0b2
+    opacity: 0.8
+
+  .promo_columns--wrapper
+    position: absolute
+    left: 47%
+    top: 8%
+    transform: translate(-43%, 13%)
+
+    width: auto
+
+  img.promo_img--metro
+    width: 35px
+    height: 25px
+
+  p.promo_p--metro
+    font-size: 13px
+    font-weight: bold
+
+  figure.promo_figure
+    margin-bottom: 24px
+
+
+  .main_secondColumn--wiFi img
+    width: 176px
+    height: 40px
+
+  .main_call--main figcaption
+    font-size: 11px
+    text-transform: uppercase
+    line-height: 1.3
+    margin-left: -10px
+    font-weight: bold
+
+  .main_call--main img
+    margin: 10px 0 10px 10px
+
+  .main_map--main p
+    font-size: 10px
+
+  .main_text--mainImg
+    margin: 10px 0 0 10px
+    width: 100px
+    display: none
+
+  nav
+    display: none
+
+  .main_map--main iframe
+    height: 200px
+
+  .top_line
+    display: block
+
+  #nav p
+    padding: 17px 0
     font-size: 16px
-    text-align: center
 
-  .main_p--bottling, .main_p--cleaning, .main_p--cleaningDrains,
-  .main_p--clearningAir, .main_p--equipment, .main_p--filters,
-  .main_p--ozonizer, .main_p--systemClearning
-    font-size: 16px
-    width: 304px
-    height: 77px
+  .promo_wrapper
+    height: 444px
 
-  .main_h2
-   margin-bottom: 10px
+  .promo_wrapper.chilld
+    display: none
 
-  .services_h3
+  img.whereToSleep
+    width: 300px
+    height: 100px
+
+  img.galery
+    width: 147px
+
+  .wrapper_hostel
+    flex-direction: column
+
+  .main_secondColumn
+    margin-left: 10px
+    margin-right: 10px
+
+  .wrapper_hostel
+    margin: 0 32% 0 19%
+    width: 60%
+
+  img.galery_hostel
+    height: 200px
+
+  p.main_description--main
     font-size: 17px
+    margin-bottom: 5px
 
-  .service_p, .service_p--right
-    font-size: 18px
+  a.main_more--main
+    margin-right: 0
+    margin-top: 0
 
-  a.service_a
-    background-color: #898989
-    color: #fff
-    padding: 13px 35px 12px 25px
-    font-size: 18px
+  img.header_logoTop--img
+    width: 113px
+    height: 36px
+    margin-left: -13px
+    margin-top: 10px
 
-  a.child_child
+  .main_text--main.place
+    margin-left: 0px
+
+
+
+  .promo_columns
+    background-color: none
+    opacity: 0
     display: none
 
+  .promo_figcaption--logoName span
+    font-size: 35px!important
+
+  h1
+    font-size: 39px!important
+
+
+  .promo_columns--wrapper
+    display: none
+
+  figure.promo_figure--logoName
+    display: block
+
+  h1.main_text--mainH4
+    line-height: 0.9
 
 
 
 
-  /* Custom, iPhone Retina */
-  @media only screen and (max-width : 320px)
-
-    // body
-    //   display: none
 
 
-  /*==========  Mobile First  ==========*/
-
-  /* Custom, iPhone Retina */
-  @media only screen and (min-width : 320px)
-
-    // body
-    //   display: none
-
-
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width : 480px)
-
-    /**/
-
-
-
-  /* Small Devices, Tablets */
-  @media only screen and (min-width : 740px)
-
-    nav.nav_mobile
-      display: none
-
-
-
-  /* Small Devices, Tablets */
-  @media only screen and (min-width : 768px)
-
-    // body.vsc-initialized
-    //   display: none
+//   .main_secondColumnH2
+//     font-size: 25px
+//     margin-top: 12px
+//
+// .main_secondColumn--introduction p
+//     line-height: 1.3
+//     font-size: 17px
 
 
 
 
-  /* Medium Devices, Desktops */
-  @media only screen and (min-width : 992px)
-  	/**/
-
-
-  /* Large Devices, Wide Screens */
-  @media only screen and (min-width : 1200px)
-  	/**/
-
-
-  /*==========  iPad в landscape  ==========*/
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
-
-  	.profileWrapper
-      margin-top: -7%
 
 
 
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
 
-  	.profileWrapper
-      margin-top: -15%
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
