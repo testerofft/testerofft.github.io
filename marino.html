@@ -28,13 +28,48 @@
 
 <body>
 
+
+<!-- popup end -->
+<div id="parent_popup">
+  <div id="popup">
+      <div id="title">
+        <p id="cross" onclick="change2()">&#9747;</p>
+        <h4>Заявка</h4>
+      </div>
+      <form id='form'>
+        <p>
+          <input type="text" name='name' id='name' placeholder="Имя*">
+        </p>
+        <p>
+          <input type="text" name='phone' id='phone' placeholder="Телефон*">
+        </p>
+        <p>
+          <input type="email" name='email' id='email' placeholder="Эл.почта">
+        </p>
+        <p>
+          <textarea name='message' id='message' rows="5" placeholder="Задайте ваш вопрос"></textarea>
+        </p>
+        <p class="full">
+          <div id="button" onclick="change1()">Отправить</div>
+        </p>
+      </form>
+  </div>
+</div>
+<!-- popup end -->
+
+<!-- answer start -->
+<div id="popup_answer">
+ <p>Ваша заявка принята!</br>Ожидайте звонка нашего специалиста!</p>
+</div>
+<!-- answer end -->
+
 <!-- header -->
 <header>
 	<div class="header_top--wrapper">
 		<div class="header_top">
 			<div class="header_nameCity--wrapper"><p class="header_nameCity">г. Москва</p></div>
 			<div class="header_logoTop"><a href="./index.html"><img class="header_logoTop--img" src="./img/logo-mainName.png" alt="Лого"></a></div>
-			<div class="header_callBack--wrapper"><a class="header_callBack" href="function()">обратная связь</a></div>
+			<div class="header_callBack--wrapper"><a class="header_callBack" href="" onclick="change()">обратная связь</a></div>
 			<figure class="header_figure">
 				<img class="header_logoPhone" src="./img/icon_call_24.png" alt="иконка телефона">
 				<figcaption><p class="header_phone"><p><a class="header_phone--a" href="tel:+79854431004">+7 985 44 31 004</a></p></figcaption>

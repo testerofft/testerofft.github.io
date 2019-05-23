@@ -1,10 +1,8 @@
 
-
 function change () {
   setTimeout(
     function () {
-      // document.getElementById('parent_popup').style.display='flex';
-			document.getElementById('parent_popup').style.display='block';
+      document.getElementById('parent_popup').style.display='block';
   }, 400);
     event.preventDefault();
 };
@@ -17,6 +15,7 @@ function change2 () {
   }, 400);
     event.preventDefault();
 };
+
 
 
 function change1 () {
@@ -41,8 +40,7 @@ function change1 () {
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
 
-    // axios.post('http://artur4ik.beget.tech/send', { name, email, phone, message })
-      axios.post('http://localhost:3000/send', { name, email, phone, message })
+    axios.post('http://artur4ik.beget.tech/send', { name, email, phone, message })
     .then(function (response) {
       console.log(response);
     })
